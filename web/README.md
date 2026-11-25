@@ -24,11 +24,16 @@ Supabase 값이 없어도 실행된다. 개발 모드(`npm run dev`)에서는 �
 src/
   context/AnalysisContext.jsx   선택한 분석과 result 공통 상태
   components/                   분석 선택, 상태 표시, ResultGuard, ChartCanvas
-  features/time-series/         FE-1 시간대별 통계
+  features/time-series/         FE-1 시간대별 통계 (평균 인원·점유율 그래프)
+  features/new-analysis/        영상+프로필 → POST /api/analyses, GET /api/analyses/{id} 조회
   features/table-usage/         FE-2 테이블 이용 (TableUsagePage.jsx)
   pages.jsx                     화면 목록(탭)
   lib/                          Supabase 조회, 시간·% 포맷
 ```
+
+## 새 분석
+
+"새 분석" 탭에서 영상과 저장된 영역 프로필 JSON을 골라 요청한다(배속 1). 2초마다 진행 상태를 조회하고, 완료되면 API 응답의 result가 모든 화면에 전달된다. API 서버의 `CORS_ORIGINS`에 웹 주소가 있어야 한다.
 
 ## 화면 추가 규칙 (FE-2)
 

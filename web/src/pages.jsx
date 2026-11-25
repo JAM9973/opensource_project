@@ -1,5 +1,6 @@
 import { lazy } from 'react'
 import StatusMessage from './components/StatusMessage.jsx'
+import NewAnalysisPage from './features/new-analysis/NewAnalysisPage.jsx'
 import TimeSeriesPage from './features/time-series/TimeSeriesPage.jsx'
 
 // FE-2 화면은 파일이 있을 때만 불러온다. 없으면 빈 객체 → 대체 화면 표시.
@@ -18,4 +19,5 @@ const TableUsagePage = loadTableUsage
 export const pages = [
   { id: 'time-series', label: '시간대별 통계', Component: TimeSeriesPage, usesResult: true },
   { id: 'table-usage', label: '테이블 이용', Component: TableUsagePage, usesResult: true },
+  { id: 'new-analysis', label: '새 분석', Component: NewAnalysisPage, usesResult: false },
 ]
