@@ -61,6 +61,17 @@ Supabase URL과 서버용 비밀 키는 .env에 설정한다. 미설정 시 data
 
 ngrok 연결은 `ngrok http 8000`. CORS_ORIGINS에 실제 Vercel 주소를 설정한다. API 인증은 아직 없으므로 접근 제한을 적용한 뒤 외부에 공개한다.
 
+## 웹
+
+```powershell
+cd web
+npm install
+Copy-Item .env.example .env.local
+npm run dev
+```
+
+환경변수와 화면 구조는 web/README.md 참고.
+
 ## 검증
 
 ```powershell
