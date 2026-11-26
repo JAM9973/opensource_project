@@ -1,0 +1,26 @@
+/* FE-2 테이블 이용 화면 전용. 공통 변수(--accent 등)만 사용한다. */
+
+.tu-picker { display: flex; flex-wrap: wrap; gap: 6px; }
+.tu-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--bg); color: var(--text); font-weight: 600; cursor: pointer;
+}
+.tu-chip:hover { border-color: var(--accent); }
+.tu-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tu-count {
+  min-width: 20px; padding: 0 6px; border-radius: 999px; text-align: center;
+  font-size: 0.75rem; font-variant-numeric: tabular-nums;
+  background: var(--surface); color: var(--muted);
+}
+.tu-chip.active .tu-count { background: rgba(255, 255, 255, 0.2); color: #fff; }
+
+.tu-link {
+  padding: 0; border: none; background: none; cursor: pointer;
+  font-weight: 600; color: var(--accent); text-decoration: underline; text-underline-offset: 2px;
+}
+.tu-summary tr.is-selected td { background: var(--accent-soft); }
+.tu-summary tr.is-selected .tu-link { text-decoration: none; }
+
+.tu-sec { color: var(--muted); font-size: 0.8125rem; margin-left: 4px; }
+.tu-scroll { overflow-x: auto; }
